@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "https://id-preview--8b636467-9692-477a-843b-60ff8bcc4d54.lov" },
+      { name: "description", content: "Stocks City Learning Hub is a premium React + TypeScript + Tailwind CSS platform for stock market education." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "https://id-preview--8b636467-9692-477a-843b-60ff8bcc4d54.lov" },
+      { property: "og:description", content: "Stocks City Learning Hub is a premium React + TypeScript + Tailwind CSS platform for stock market education." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "https://id-preview--8b636467-9692-477a-843b-60ff8bcc4d54.lov" },
+      { name: "twitter:description", content: "Stocks City Learning Hub is a premium React + TypeScript + Tailwind CSS platform for stock market education." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/74178c4a-2343-4104-b5ba-4546c8cf2606/id-preview-8b95d1ca--8b636467-9692-477a-843b-60ff8bcc4d54.lovable.app-1781186433375.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/74178c4a-2343-4104-b5ba-4546c8cf2606/id-preview-8b95d1ca--8b636467-9692-477a-843b-60ff8bcc4d54.lovable.app-1781186433375.png" },
     ],
     links: [
       {
