@@ -17,9 +17,9 @@ const FEATURES = [
 export const Route = createFileRoute("/learning")({
   head: () => ({
     meta: [
-      { title: "Learning Platform — Stocks City" },
-      { name: "description", content: "Structured learning, live sessions, market analysis & 32,000+ learner community — the Stocks City learning platform." },
-      { property: "og:title", content: "Stocks City Learning Platform" },
+      { title: "Learning Platform — Tradeverse City" },
+      { name: "description", content: "Structured learning, live sessions, market analysis & 32,000+ learner community — the Tradeverse City learning platform." },
+      { property: "og:title", content: "Tradeverse City Learning Platform" },
       { property: "og:description", content: "Structured stock market learning with live sessions and community support." },
       { property: "og:url", content: "/learning" },
     ],
@@ -48,7 +48,7 @@ function LearningPage() {
         </div>
         <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-[#C9A84C]/40 bg-[#141414] p-8 text-center">
           <p className="text-3xl font-black text-[#C9A84C] md:text-4xl">32,000+ Learners</p>
-          <p className="mt-1 text-gray-300">Learning Together on Stocks City</p>
+          <p className="mt-1 text-gray-300">Learning Together on Tradeverse City</p>
         </div>
       </section>
       <StatsSection />

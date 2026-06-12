@@ -9,10 +9,10 @@ import { INSTAGRAM_LINK, PHONE_DISPLAY, TELEGRAM_LINK, WHATSAPP_LINK } from "../
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — Stocks City" },
-      { name: "description", content: "Contact Stocks City on WhatsApp, Telegram or Instagram for course details, pricing and enrollment." },
-      { property: "og:title", content: "Contact Stocks City" },
-      { property: "og:description", content: "Reach Stocks City on WhatsApp +91 93183 36747." },
+      { title: "Contact Us — Tradeverse City" },
+      { name: "description", content: "Contact Tradeverse City on WhatsApp, Telegram or Instagram for course details, pricing and enrollment." },
+      { property: "og:title", content: "Contact Tradeverse City" },
+      { property: "og:description", content: "Reach Tradeverse City on WhatsApp +91 93183 36747." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -64,14 +64,14 @@ function ContactPage() {
             >
               <InstagramSVG size={48} />
               <span className="font-bold">Instagram</span>
-              <span className="text-xs opacity-90">@stocks__city</span>
+              <span className="text-xs opacity-90">@tradeverse__city</span>
             </a>
           </div>
 
           <div className="mt-10 rounded-2xl border border-[#1f1f1f] bg-[#0d0d0d] p-6 text-center text-gray-300">
             <p className="font-bold text-white">Educational Disclaimer</p>
             <p className="mt-2 text-sm text-gray-400">
-              Stocks City offers educational content only. We do not provide tips, calls or financial advice.
+              Tradeverse City offers educational content only. We do not provide tips, calls or financial advice.
               All trading involves risk. Please do your own research.
             </p>
           </div>

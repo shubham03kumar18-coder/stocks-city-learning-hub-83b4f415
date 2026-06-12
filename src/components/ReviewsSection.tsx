@@ -1,5 +1,5 @@
 const REVIEWS = [
-  { name: "Rahul Sharma", role: "Swing Trader", text: "Stocks City made technical analysis click for me. The structured lessons and live sessions are unmatched." },
+  { name: "Rahul Sharma", role: "Swing Trader", text: "Tradeverse City made technical analysis click for me. The structured lessons and live sessions are unmatched." },
   { name: "Priya Verma", role: "Investor", text: "Finally a platform that teaches real-world price action without the hype. Highly recommended." },
   { name: "Aman Gupta", role: "Intraday Trader", text: "Rajeev sir's risk management lessons saved my capital. Best decision I made this year." },
   { name: "Neha Kulkarni", role: "Beginner", text: "Started from zero. Now I read charts confidently. The community is super supportive." },
