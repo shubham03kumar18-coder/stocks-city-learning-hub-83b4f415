@@ -2,11 +2,11 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "../components/SiteLayout";
 import { PageHero } from "../components/PageHero";
 import { CTASection } from "../components/CTASection";
-import { LEARNING_TOPICS } from "../data/learning";
+import { LEARNING_TOPICS, type LearningTopic } from "../data/learning";
 import { WHATSAPP_LINK, TELEGRAM_LINK } from "../constants/links";
 
 export const Route = createFileRoute("/learning/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { topic: LearningTopic } => {
     const topic = LEARNING_TOPICS.find((t) => t.slug === params.slug);
     if (!topic) throw notFound();
     return { topic };
