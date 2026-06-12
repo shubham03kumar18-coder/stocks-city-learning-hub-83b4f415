@@ -8,9 +8,9 @@ import { CTASection } from "../components/CTASection";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Stocks City" },
-      { name: "description", content: "Stocks City is a premium stock market learning platform helping individuals master trading & investing through practical education by Rajeev Bair." },
-      { property: "og:title", content: "About Stocks City" },
+      { title: "About Us — Tradeverse City" },
+      { name: "description", content: "Tradeverse City is a premium stock market learning platform helping individuals master trading & investing through practical education by Rajeev Bair." },
+      { property: "og:title", content: "About Tradeverse City" },
       { property: "og:description", content: "Premium stock market learning platform by Rajeev Bair." },
       { property: "og:url", content: "/about" },
     ],
@@ -32,7 +32,7 @@ function AboutPage() {
       <PageHero
         eyebrow="ABOUT US"
         title="Built for Serious Learners"
-        subtitle="Stocks City is a premium stock market learning platform dedicated to helping individuals understand trading and investing through practical education, market insights, and real-world examples."
+        subtitle="Tradeverse City is a premium stock market learning platform dedicated to helping individuals understand trading and investing through practical education, market insights, and real-world examples."
       />
       <AboutSection />
       <section className="bg-[#0a0a0a] px-4 py-20">

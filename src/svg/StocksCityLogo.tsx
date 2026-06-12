@@ -1,6 +1,6 @@
 export function StocksCityLogo() {
   return (
-    <svg width="170" height="40" viewBox="0 0 170 40" xmlns="http://www.w3.org/2000/svg" aria-label="Stocks City">
+    <svg width="170" height="40" viewBox="0 0 170 40" xmlns="http://www.w3.org/2000/svg" aria-label="Tradeverse City">
       <defs>
         <linearGradient id="sc-gold" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#C9A84C" />
@@ -26,7 +26,7 @@ export function StocksCityLogo() {
         fontSize="15"
         letterSpacing="2"
       >
-        STOCKS CITY
+        TRADEVERSE CITY
       </text>
     </svg>
   );

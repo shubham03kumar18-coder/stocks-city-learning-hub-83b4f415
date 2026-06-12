@@ -40,7 +40,7 @@ export function Footer() {
       </div>
       <div className="relative mx-auto mt-10 max-w-6xl space-y-1 border-t border-[#1f1f1f] pt-6 text-center text-xs">
         <p className="italic text-gray-500">⚠️ For Educational Purposes Only. Not Financial Advice.</p>
-        <p className="text-gray-600">© 2025 Stocks City. All rights reserved.</p>
+        <p className="text-gray-600">© 2025 Tradeverse City. All rights reserved.</p>
       </div>
     </footer>
   );

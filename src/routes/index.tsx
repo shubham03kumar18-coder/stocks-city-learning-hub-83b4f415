@@ -9,9 +9,9 @@ import { CTASection } from "../components/CTASection";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Stocks City — Learn Stock Market The Right Way | Rajeev Bair" },
-      { name: "description", content: "Join 32,000+ learners at Stocks City. Master trading, investing, technical analysis, price action, risk management & market psychology with structured education." },
-      { property: "og:title", content: "Stocks City — Premium Stock Market Learning" },
+      { title: "Tradeverse City — Learn Stock Market The Right Way | Rajeev Bair" },
+      { name: "description", content: "Join 32,000+ learners at Tradeverse City. Master trading, investing, technical analysis, price action, risk management & market psychology with structured education." },
+      { property: "og:title", content: "Tradeverse City — Premium Stock Market Learning" },
       { property: "og:description", content: "32,000+ learners learning together. Premium stock market education by Rajeev Bair." },
       { property: "og:url", content: "/" },
     ],

@@ -14,9 +14,9 @@ const TOPICS = [
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Trading Courses — Stocks City" },
-      { name: "description", content: "Master stock market basics, candlestick & chart patterns, price action, options, swing trading and more with Stocks City courses." },
-      { property: "og:title", content: "Trading Courses — Stocks City" },
+      { title: "Trading Courses — Tradeverse City" },
+      { name: "description", content: "Master stock market basics, candlestick & chart patterns, price action, options, swing trading and more with Tradeverse City courses." },
+      { property: "og:title", content: "Trading Courses — Tradeverse City" },
       { property: "og:description", content: "Complete trading curriculum from basics to advanced." },
       { property: "og:url", content: "/courses" },
     ],

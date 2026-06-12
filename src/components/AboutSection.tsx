@@ -10,7 +10,7 @@ export function AboutSection() {
         </div>
         <div>
           <h2 className="text-4xl font-black text-white">Rajeev Bair</h2>
-          <p className="mt-1 text-[#C9A84C]">Founder — Stocks City Learning Platform</p>
+          <p className="mt-1 text-[#C9A84C]">Founder — Tradeverse City Learning Platform</p>
           <p className="mt-2 text-gray-400">9,000+ Students | 40+ Lessons | Trading Expert</p>
           <p className="mt-4 max-w-xl text-gray-300">
             Passionate stock market educator helping traders master technical analysis through structured 200-day

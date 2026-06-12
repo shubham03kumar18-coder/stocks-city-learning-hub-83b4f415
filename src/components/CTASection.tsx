@@ -52,7 +52,7 @@ export function CTASection() {
           className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#2a2a2a] bg-[#141414] px-5 py-3 text-white transition hover:scale-105"
         >
           <InstagramSVG size={24} />
-          <span className="font-bold">@stocks__city</span>
+          <span className="font-bold">@tradeverse__city</span>
           <span className="text-sm text-gray-400">Follow for daily lessons</span>
         </a>
       </div>
