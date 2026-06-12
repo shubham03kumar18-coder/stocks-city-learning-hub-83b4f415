@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import logoAsset from "../assets/tradeverse-logo.jpg.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -77,24 +78,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "https://id-preview--8b636467-9692-477a-843b-60ff8bcc4d54.lov" },
-      { name: "description", content: "Tradeverse City Learning Hub is a premium React + TypeScript + Tailwind CSS platform for stock market education." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "https://id-preview--8b636467-9692-477a-843b-60ff8bcc4d54.lov" },
-      { property: "og:description", content: "Tradeverse City Learning Hub is a premium React + TypeScript + Tailwind CSS platform for stock market education." },
+      { title: "Tradeverse City — Learn, Plan, Trade, Profit" },
+      { name: "description", content: "Tradeverse City — Premium stock market learning platform. Learn, Plan, Trade, Profit with structured trading and investing programs." },
+      { name: "author", content: "Tradeverse City" },
+      { property: "og:title", content: "Tradeverse City — Learn, Plan, Trade, Profit" },
+      { property: "og:description", content: "Premium stock market learning platform. Master trading, investing, and technical analysis." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "https://id-preview--8b636467-9692-477a-843b-60ff8bcc4d54.lov" },
-      { name: "twitter:description", content: "Tradeverse City Learning Hub is a premium React + TypeScript + Tailwind CSS platform for stock market education." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/74178c4a-2343-4104-b5ba-4546c8cf2606/id-preview-8b95d1ca--8b636467-9692-477a-843b-60ff8bcc4d54.lovable.app-1781186433375.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/74178c4a-2343-4104-b5ba-4546c8cf2606/id-preview-8b95d1ca--8b636467-9692-477a-843b-60ff8bcc4d54.lovable.app-1781186433375.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Tradeverse City — Learn, Plan, Trade, Profit" },
+      { name: "twitter:description", content: "Premium stock market learning platform — Learn, Plan, Trade, Profit." },
+      { property: "og:image", content: logoAsset.url },
+      { name: "twitter:image", content: logoAsset.url },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/jpeg", href: logoAsset.url },
+      { rel: "apple-touch-icon", href: logoAsset.url },
     ],
   }),
   shellComponent: RootShell,
