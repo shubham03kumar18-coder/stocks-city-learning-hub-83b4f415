@@ -16,6 +16,8 @@ import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LearningSlugRouteImport } from './routes/learning.$slug'
+import { Route as CoursesSlugRouteImport } from './routes/courses.$slug'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -52,34 +54,50 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LearningSlugRoute = LearningSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => LearningRoute,
+} as any)
+const CoursesSlugRoute = CoursesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => CoursesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/courses': typeof CoursesRoute
-  '/learning': typeof LearningRoute
+  '/courses': typeof CoursesRouteWithChildren
+  '/learning': typeof LearningRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/courses/$slug': typeof CoursesSlugRoute
+  '/learning/$slug': typeof LearningSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/courses': typeof CoursesRoute
-  '/learning': typeof LearningRoute
+  '/courses': typeof CoursesRouteWithChildren
+  '/learning': typeof LearningRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/courses/$slug': typeof CoursesSlugRoute
+  '/learning/$slug': typeof LearningSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/courses': typeof CoursesRoute
-  '/learning': typeof LearningRoute
+  '/courses': typeof CoursesRouteWithChildren
+  '/learning': typeof LearningRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/courses/$slug': typeof CoursesSlugRoute
+  '/learning/$slug': typeof LearningSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +109,8 @@ export interface FileRouteTypes {
     | '/learning'
     | '/privacy'
     | '/terms'
+    | '/courses/$slug'
+    | '/learning/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +120,8 @@ export interface FileRouteTypes {
     | '/learning'
     | '/privacy'
     | '/terms'
+    | '/courses/$slug'
+    | '/learning/$slug'
   id:
     | '__root__'
     | '/'
@@ -109,14 +131,16 @@ export interface FileRouteTypes {
     | '/learning'
     | '/privacy'
     | '/terms'
+    | '/courses/$slug'
+    | '/learning/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  CoursesRoute: typeof CoursesRoute
-  LearningRoute: typeof LearningRoute
+  CoursesRoute: typeof CoursesRouteWithChildren
+  LearningRoute: typeof LearningRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
 }
@@ -172,15 +196,52 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/learning/$slug': {
+      id: '/learning/$slug'
+      path: '/$slug'
+      fullPath: '/learning/$slug'
+      preLoaderRoute: typeof LearningSlugRouteImport
+      parentRoute: typeof LearningRoute
+    }
+    '/courses/$slug': {
+      id: '/courses/$slug'
+      path: '/$slug'
+      fullPath: '/courses/$slug'
+      preLoaderRoute: typeof CoursesSlugRouteImport
+      parentRoute: typeof CoursesRoute
+    }
   }
 }
+
+interface CoursesRouteChildren {
+  CoursesSlugRoute: typeof CoursesSlugRoute
+}
+
+const CoursesRouteChildren: CoursesRouteChildren = {
+  CoursesSlugRoute: CoursesSlugRoute,
+}
+
+const CoursesRouteWithChildren =
+  CoursesRoute._addFileChildren(CoursesRouteChildren)
+
+interface LearningRouteChildren {
+  LearningSlugRoute: typeof LearningSlugRoute
+}
+
+const LearningRouteChildren: LearningRouteChildren = {
+  LearningSlugRoute: LearningSlugRoute,
+}
+
+const LearningRouteWithChildren = LearningRoute._addFileChildren(
+  LearningRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  CoursesRoute: CoursesRoute,
-  LearningRoute: LearningRoute,
+  CoursesRoute: CoursesRouteWithChildren,
+  LearningRoute: LearningRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
 }
