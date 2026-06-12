@@ -33,7 +33,7 @@ export const Route = createFileRoute("/courses/$slug")({
 });
 
 function CourseDetail() {
-  const { course } = Route.useLoaderData();
+  const { course } = Route.useLoaderData() as { course: Course };
   return (
     <SiteLayout>
       <PageHero eyebrow={`COURSE ${course.number}`} title={course.title} subtitle={course.tagline} />

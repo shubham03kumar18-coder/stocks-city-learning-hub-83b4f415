@@ -33,7 +33,7 @@ export const Route = createFileRoute("/learning/$slug")({
 });
 
 function LearningDetail() {
-  const { topic } = Route.useLoaderData();
+  const { topic } = Route.useLoaderData() as { topic: LearningTopic };
   return (
     <SiteLayout>
       <PageHero eyebrow="LEARNING PLATFORM" title={`${topic.icon} ${topic.title}`} subtitle={topic.tagline} />
